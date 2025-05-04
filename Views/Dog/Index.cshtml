@@ -1,0 +1,58 @@
+﻿@model IEnumerable<registerDog.Models.Dog>
+
+@{
+	ViewData["Title"] = "List Dogs";
+}
+
+<h2 class="mt-4 mb-4">Lista de Cachorros</h2>
+
+<div class="col-12">
+	<a asp-action="Register" class="btn btn-primary mb-3">Cadastrar Pet</a>
+</div>
+@if (Model!= null && Model.Any())
+{
+
+	<div class="table-responsive">
+	<table class="table table-striped">
+		<thead class="table-dark">
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Raça</th>
+				<th>Idade</th>
+				<th>Sexo</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var dog in Model)
+			{
+				<tr> 
+					<td>@dog.Id</td>
+					<td>@dog.Name</td>
+					<td>@dog.Breed</td>
+					<td>@dog.Age</td>
+					<td>@dog.Sex</td>
+					<td class="buttonDelete">
+						<form asp-action="Register" asp-controller="Dog" method="get"  >
+							<input type="hidden" name="id" value="@dog.Id" />
+							<button type="submit" class="btn btn-warning btn-sm me-2">Editar</button>
+						</form>
+
+						<form asp-action="Delete" asp-controller="Dog" method="post">
+							<input type="hidden" name="id" value="@dog.Id" w-25/>
+							<button type="submit" class="btn btn-danger btn-sm me-2" onclick="return confirm('Deseja realmente excluir');">Deletar</button>
+
+						</form>
+
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+	</div>
+}
+else
+{
+	<p class="h5 text-secondary">Nenhum Cachorro cadastrado ainda!</p>
+}
+

@@ -1,0 +1,93 @@
+﻿@model registerDog.Models.Dog
+@{
+	ViewData["Title"] = "Register Dog";
+}
+
+<div class="col-12 d-flex justify-content-center mb-lg-0 mb-5">
+	<img src="~/imgs/cachorroIndex.jpg" class="imgIndex" />
+</div>
+
+<div class="position-relative" style="bottom:40px">
+	<figure class="text-end">
+		<blockquote class="blockquote">
+			<p class="h1 fst-italic mt-5">Cadastre seu Pet!</p>
+		</blockquote>
+		<figcaption class="blockquote-footer">
+			Seu amigo mais fiel, <cite title="Source Title">sempre presente, leal de coração.</cite>
+		</figcaption>
+	</figure>
+	<div class="col-12">
+		<div class="rounded p-3 shadow-css">
+			<form asp-action="Register" method="post" class="row g-3">
+				<input type="hidden" id="currentBrend" value="@Model?.Breed" />
+
+				<input type="hidden" asp-for="Id" />
+				<div class="col-md-6">
+					<label asp-for="Name" class="form-label">Nome</label>
+					<input asp-for="Name" class="form-control" />
+					<span asp-asp-validation-for="Name" class="text-danger"></span>
+				</div>
+
+				<div class="col-md-6">
+					<label asp-for="Breed" class="form-label" for="breedSelect">Raça</label>
+					<select asp-for="Breed" class="form-select" id="breedSelect">
+						<option value="">Selecione</option>
+						<option>Carregando...</option>
+					</select>
+					<span asp-validation-for="Breed" class="text-danger"></span>
+				</div>
+				<div class="col-md-6">
+					<label asp-for="Age" class="form-label">Idade</label>
+					<input asp-for="Age" type="number" class="form-control" />
+					<span asp-asp-validation-for="Age" class="text-danger"></span>
+				</div>
+
+				<div class="col-md-6">
+					<label class="form-label">Sexo</label><br />
+					<div class="form-label">
+						<input class="form-check-input" type="radio" id="sexoMacho" asp-for="Sex" value="Macho" />
+						<label class="form-check-label" for="sexoMacho">Macho</label>
+					</div>
+					<div class="form-label">
+						<input class="form-check-input" type="radio" id="sexoFemea" asp-for="Sex" value="Fêmea" />
+						<label class="form-check-label" for="sexoFemea">Fêmea</label>
+					</div>
+					<span asp-asp-validation-for="Sex" class="text-danger"></span>
+				</div>
+
+				<div class="col-12">
+					<button type="submit" class="btn btn-primary">Cadastrar</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			 fetch('https://raw.githubusercontent.com/dariusk/corpora/master/data/animals/dogs.json').then(response => response.json()).then(data =>{
+				 var select = document.getElementById('breedSelect');
+				 var selectedBreed = document.getElementById('currentBrend')?.value;
+				 select.innerHTML = '<option value="">Selecione</option>';
+
+				 data.dogs.forEach(function(breed){
+
+				  var option = document.createElement('option');
+				  option.value = breed;
+				  option.text = breed;
+
+				  if(breed === selectedBreed){
+					  option.selected = true;
+				  }
+				  select.appendChild(option);
+				 });
+			 }).catch(Error => console.error('Erro ao carregar raças de cachorros', error));
+		})
+	</script>
+
+    }
