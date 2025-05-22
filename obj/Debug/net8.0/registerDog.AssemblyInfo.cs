@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("registerDog")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3f94669ccddd18c5e9ad19d4e6026374b44a212")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a576aa8b937205933c7fa3b3dd580cc49005421f")]
 [assembly: System.Reflection.AssemblyProductAttribute("registerDog")]
 [assembly: System.Reflection.AssemblyTitleAttribute("registerDog")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
