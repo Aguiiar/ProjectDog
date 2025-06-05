@@ -95,10 +95,23 @@ Além do **Bootstrap**, também desenvolvi **estilos personalizados em CSS**, re
 ## 📸 Demonstração
 
 ![img-1](imagens/img-1.png)
+
+---
+
 ![img-2](imagens/img-2.png)
+
+---
+
 ![img-3](imagens/img-3.png)
+
+---
+
 ![img-4](imagens/img-4.png)
+
+---
+
 ![img-5](imagens/img-5.png)
+
 
 ---
 
