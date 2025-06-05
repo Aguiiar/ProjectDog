@@ -38,7 +38,7 @@ O projeto foi desenvolvido com foco em funcionalidade, organização e responsiv
 - 🗑️ **Confirmação de Exclusão**  
   Antes de excluir qualquer pet, o sistema exibe uma **mensagem de confirmação**, garantindo que a exclusão não aconteça por engano.
 
-- 🎨 **Estilo com Bootstrap**
+- 🎨 **Estilo com Bootstrap**  
 Utilizei o Bootstrap para facilitar a personalização e garantir um design moderno, responsivo e visualmente atraente, alinhado com a identidade do projeto.
 
 - 📱 **Responsividade**  
@@ -71,7 +71,6 @@ A página de cadastro (**"Cadastre seu Pet!"**) possui um formulário bem organi
 - 🚻 Sexo  
 
 A lista de raças é obtida através de **JavaScript com `fetch`**, consumindo um **arquivo JSON online**.  
-**Além de consumir, também contribuo ativamente para manter e popular essa API**, garantindo que os dados de raças estejam sempre atualizados para todos que a utilizam.  
 
 O sistema valida se os campos importantes foram devidamente preenchidos antes de permitir o cadastro, prevenindo o armazenamento de informações incompletas ou incorretas.  
 
