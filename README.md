@@ -38,8 +38,8 @@ O projeto foi desenvolvido com foco em funcionalidade, organização e responsiv
 - 🗑️ **Confirmação de Exclusão**  
   Antes de excluir qualquer pet, o sistema exibe uma **mensagem de confirmação**, garantindo que a exclusão não aconteça por engano.
 
-- 🎨 **Estilo com CSS Personalizado**  
-  Além do **Bootstrap**, utilizei **CSS próprio** para complementar a estilização, mantendo o visual alinhado com a estética do framework e garantindo uma aparência moderna e coesa.
+- 🎨 **Estilo com Bootstrap**
+Utilizei o Bootstrap para facilitar a personalização e garantir um design moderno, responsivo e visualmente atraente, alinhado com a identidade do projeto.
 
 - 📱 **Responsividade**  
   Layout responsivo utilizando **Bootstrap**, garantindo uma ótima experiência de uso em **computadores, tablets e celulares**.
@@ -55,7 +55,7 @@ Utilizei a versão mais nova do **ASP.NET com Razor Pages**, que facilita a cria
 O sistema realiza todas as operações essenciais:  
 
 - ✅ **Cadastrar**  
-- ✅ **Mostrar**  
+- ✅ **Listar**  
 - ✅ **Editar**  
 - ✅ **Apagar**  
 
@@ -87,8 +87,6 @@ Cada registro possui botões para:
 
 - ✏️ **"Editar"** → Redireciona para o formulário com os dados já preenchidos, facilitando a atualização das informações.  
 - 🗑️ **"Deletar"** → Antes da exclusão, o sistema solicita **confirmação**, evitando a remoção acidental de registros.  
-
-Além do **Bootstrap**, também desenvolvi **estilos personalizados em CSS**, reforçando o design responsivo e elegante, mantendo a aparência coesa com o padrão visual do framework.
 
 ---
 
